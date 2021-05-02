@@ -1,0 +1,54 @@
+{% extends 'indexC.html' %}
+
+{% block content %}
+
+
+
+
+<div class="row">
+  <div class="col">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Type</th>
+          <th scope="col">Date</th>
+          <th scope="col">Venue</th>
+          <th scope="col">Instracture</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for classList in classList %}
+        <tr>
+          <th scope="row">{{ classList.id }}</th>
+          <td>{{ classList.types }}</td>
+          <td>{{ classList.Date }}</td>
+          <td>{{ classList.Venue }}</td>
+          <td>{{ classList.instructure }}</td>
+          
+
+          <td>
+            <a class="btn btn-outline-info" href=""
+              >Edit</a>
+         
+          <a class="btn btn-outline-info" href=""
+              >Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<a href="AddC" class="btn btn-outline-dark">Create</a>
+</div>
+
+
+
+
+
+
+{% endblock %}

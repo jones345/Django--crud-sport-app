@@ -1,0 +1,51 @@
+{% extends 'indexV.html' %}
+
+{% block content %}
+
+
+
+
+<div class="row">
+  <div class="col">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Type</th>
+          <th scope="col">Date</th>
+          
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for form in form %}
+        <tr>
+          <th scope="row">{{ form.id }}</th>
+          <td>{{ form.Title }}</td>
+          <td>{{ form.Description }}</td>
+          
+
+          <td>
+            <a class="btn btn-outline-info" href="{% url 'editV' form.id %}"
+              >Edit</a>
+         
+          <a class="btn btn-outline-info" href="{% url 'deleteV' form.id %}"
+              >Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<a href="volunteViewAdd" class="btn btn-outline-dark">Create</a>
+</div>
+
+
+
+
+
+
+{% endblock %}

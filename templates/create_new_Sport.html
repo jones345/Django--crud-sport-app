@@ -1,0 +1,14 @@
+{% extends 'indexG.html' %}
+
+{% block content %}
+
+<form action ="Addsport" method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-primary">Create</button>
+
+</form>
+
+{% endblock %}

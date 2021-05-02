@@ -1,0 +1,14 @@
+{% extends 'indexV.html' %}
+
+{% block content %}
+
+<form action ="VonterAction" method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-primary">Create</button>
+
+</form>
+
+{% endblock %}

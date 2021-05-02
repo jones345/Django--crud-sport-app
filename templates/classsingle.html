@@ -1,0 +1,138 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The City of Yokyo || Fun Olympics Games</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="  {% static 'css/open-iconic-bootstrap.min.css '%}">
+    <link rel="stylesheet" href="  {% static 'css/animate.css '%}">
+    
+    <link rel="stylesheet" href="   {% static 'css/owl.carousel.min.css ' %}">
+    <link rel="stylesheet" href="  {% static 'css/owl.theme.default.min.css ' %}">
+    <link rel="stylesheet" href="  {% static 'css/magnific-popup.css ' %}">
+
+    <link rel="stylesheet" href="  {% static 'css/aos.css ' %}">
+
+    <link rel="stylesheet" href="   {% static 'css/ionicons.min.css ' %}">
+    
+    <link rel="stylesheet" href="  {% static 'css/flaticon.css ' %}">
+    <link rel="stylesheet" href="  {% static 'css/icomoon.css ' %}">
+	<link rel="stylesheet" href="  {% static 'css/style.css ' %}">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-bible">City Yokyo</span></a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>games</span></a></li>
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>Events</span></a></li>
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>Volunteer</span></a></li>
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>Blog</span></a></li>
+	          <li class="nav-item"><a href="home-section" class="nav-link"><span>Hotels</span></a></li>
+            <li class="nav-item"><a href="home-section" class="nav-link"><span>Contact</span></a></li>
+			  
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  
+	  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_4.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Our <span>Sport games</span></h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="#">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="#">games <i class="ion-ios-arrow-forward"></i></a></span> </p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+    <section class="ftco-section bg-light ftco-event" id="events-section">
+      <section class="ftco-section">
+        <div class="container">
+      <form action="search"  method="POST" class="search-form">
+        <div class="form-group">
+          <span class="icon icon-search"></span>
+          <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+        </div>
+      </form>
+        </div>
+        </section>
+        </div>
+				<div class="row">
+
+					
+					{% for classList in classList %}
+        	<div class="col-md-4">   															
+        		
+						<div class="img d-flex align-items-center justify-content-center"  >
+							
+    						<div class="text-content p-4 text-center">
+                
+                  <div class="card">
+                    <div class="card-header">
+                      <span>{{ classList.Date }}</span>
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>{{ classList.types }}</p>
+                        <footer class="blockquote-footer">by.{{ classList.instructure }},<cite title="Source Title"> Venue :{{ classList.Venue }}</cite></footer>
+                      </blockquote>
+                    </div>
+                  </div>
+    						</div>
+    					</div>
+    					
+  					
+        	</div>
+        	
+			{% endfor %}
+			
+			
+		</section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+     
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="  {% static 'js/jquery.min.js' %}"></script>
+  <script src="  {% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="  {% static 'js/popper.min.js '%} "></script>
+  <script src="  {% static 'js/bootstrap.min.js'%}"></script>
+  <script src="  {% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="  {% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="  {% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="  {% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="  {% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="  {% static 'js/aos.js' %}"></script>
+  <script src="  {% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="   {% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="  {% static 'js/google-map.js' %}"></script>
+  
+  <script src="  {% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>

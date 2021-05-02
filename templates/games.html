@@ -1,0 +1,53 @@
+{% extends 'indexG.html' %}
+
+{% block content %}
+
+
+
+
+<div class="row">
+  <div class="col">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Teams</th>
+          <th scope="col">Type </th>
+          <th scope="col">Date</th>
+          <th scope="col">Venue </th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for gamesList in gamesList %}
+        <tr>
+          <th scope="row">{{ gamesList.id }}</th>
+          <td>{{ gamesList.Teams }}</td>
+          <td>{{ gamesList.Type }}</td>
+          <td>{{ gamesList.Date }}</td>
+          <td>{{ gamesList.Venue }}</td>
+
+          <td>
+            <a class="btn btn-outline-info" href="{% url 'edit' gamesList.id %}"
+              >Edit</a>
+         
+          <a class="btn btn-outline-info" href="{% url 'delete' gamesList.id %}"
+              >Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<a href="AddSV" class="btn btn-outline-dark">Create</a>
+</div>
+
+
+
+
+
+
+{% endblock %}

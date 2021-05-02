@@ -1,0 +1,14 @@
+{% extends 'inde.html' %}
+
+{% block content %}
+
+<form action ="Add_News" method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-primary">Create</button>
+
+</form>
+
+{% endblock %}
